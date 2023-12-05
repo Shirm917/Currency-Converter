@@ -48,7 +48,7 @@ async function exchange(event) {
         const oneAmount = currencyChangeObj.conversion_result;
         const conversionRate = currencyChangeObj.conversion_rate;
         const amountValue = amount.value;
-        const convertedAmount = amountValue * conversionRate; 
+        const convertedAmount = amountValue * conversionRate;
         displayAmount(convertedAmount, oneAmount);
     } catch(err) {
         alert(err);
@@ -60,7 +60,7 @@ function displayAmount(ConversionAmount, defaultAmount) {
     const defaultPara = document.getElementById("default");
     conversionPara.textContent = "";
     defaultPara.textContent = "";
-    const amountNum = document.createTextNode(`${ConversionAmount} ${toSelect.value}`);
+    const amountNum = document.createTextNode(`${ConversionAmount.toFixed(2)} ${toSelect.value}`);
     const defaultText = document.createTextNode(`1 ${fromSelect.value} is ${defaultAmount} ${toSelect.value}`);
     conversionPara.append(amountNum);
     defaultPara.append(defaultText);
