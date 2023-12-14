@@ -64,10 +64,22 @@ input {
 p {
   height: 20px;
   color: white;
-  background-color: rgba(14, 14, 141, 0.3);
   max-width: 100%;
+}
+
+#conversion,
+#default {
+  background-color: rgba(14, 14, 141, 0.3);
 }
 
 i {
   cursor: pointer;
+}
+
+.switch-text {
+  visibility: hidden;
+}
+
+i:hover + .switch-text {
+  visibility: visible;
 }
